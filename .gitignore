@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# useless for docker
+/design
+
 # production
 /build
 
