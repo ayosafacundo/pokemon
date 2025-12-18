@@ -1,10 +1,14 @@
-FROM node:lts-alpine3.23
+FROM node:lts-alpine3.23 AS builder 
 
 WORKDIR /app
+COPY package*.json .
+RUN npm install
 COPY . .
+RUN npm run build
 
-EXPOSE 3000
 
-RUN npm install && npm run build
-
-CMD ["npm", "run", "start"]
+FROM nginx:alpine-slim
+COPY --from=builder /app/build /usr/share/nginx/html/pokemon
+EXPOSE 80
+RUN ls /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;"]

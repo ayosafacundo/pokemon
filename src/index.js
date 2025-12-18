@@ -4,7 +4,6 @@ import './sass/Main.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 /* import NotFoundPage from "./pages/notfoundpage";*/
-import About from './pages/About.jsx';
 import CardView from './pages/CardView';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,12 +14,6 @@ const links = [
     path: "/pokemon/"
   }
 ]
-/*
-{
-    name: "About",
-    path: "/about/"
-  }
-*/
 
 root.render(
   <React.StrictMode>

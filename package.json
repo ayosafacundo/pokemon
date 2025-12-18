@@ -20,7 +20,7 @@
     "bugs": {
         "url": "https://github.com/ayosafacundo/pokemon/issues"
     },
-    "homepage": "https://ayosafacundo.github.io/pokemon",
+    "homepage": ".",
     "dependencies": {
         "axios": "^1.2.0",
         "react": "^18.2.0",
