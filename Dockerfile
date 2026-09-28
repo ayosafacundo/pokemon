@@ -8,7 +8,7 @@ RUN npm run build
 
 
 FROM nginx:alpine-slim
-COPY --from=builder /app/build /usr/share/nginx/html/pokemon
+COPY --from=builder /app/dist /usr/share/nginx/html/pokemon
 EXPOSE 80
 RUN ls /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]

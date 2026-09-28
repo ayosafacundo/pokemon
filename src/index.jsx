@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './sass/Main.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar.jsx';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 /* import NotFoundPage from "./pages/notfoundpage";*/
-import CardView from './pages/CardView';
+import CardView from './pages/CardView.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
